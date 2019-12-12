@@ -13,6 +13,12 @@ module.exports = {
         '96': '24rem',
         '128': '32rem',
       },
+      width: {
+        '1/3': '33%'
+      },
+      maxHeight: {
+        full: '3400px'
+      },
     }
   },
   variants: {}
