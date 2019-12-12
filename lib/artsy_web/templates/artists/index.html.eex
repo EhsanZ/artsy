@@ -1,0 +1,26 @@
+<div class="mx-auto p-8">
+  <div class="flex flex-row flex-wrap -mx-2">
+    <%= for artist <- @artists do %>
+    <div class="w-full sm:w-1/2 md:w-1/6 mb-4 px-2">
+    <a class="stretched-link" href="/artists/<%= artist["id"] %>" title="Card 2">
+      <div class="relative bg-white rounded border">
+        <picture class="block bg-gray-200 border-b">
+          <img class="block" src="<%= artist["imageUrl"] %>" alt="Card 2">
+        </picture>
+        <div class="p-4">
+          <h3 class="text-lg font-bold">
+              <%= artist["name"] %>
+          </h3>
+          <time class="block mb-2 text-sm text-gray-600" datetime="<%= artist["birthday"]%>">
+            <%= artist["birthday"] || "unknown birthday" %> 
+          </time>
+          <p>
+            <%= artist["bio"] %>
+          </p>
+        </div>
+      </div>
+    </div>
+    </a>
+    <% end %>
+  </div>
+</div>
