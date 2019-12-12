@@ -11,7 +11,7 @@ defmodule Artsy.Application do
       # Start the Ecto repository
       Artsy.Repo,
       # Start the endpoint when the application starts
-      ArtsyWeb.Endpoint
+      ArtsyWeb.Endpoint,
       # Starts a worker by calling: Artsy.Worker.start_link(arg)
       # {Artsy.Worker, arg},
     ]
