@@ -1,0 +1,19 @@
+
+<div class="mx-auto p-8">
+  <div class="flex flex-row flex-wrap -mx-2">
+    <%= for artwork <- @artworks do %>
+    <div class="sm:w-1/2 md:w-1/6 mb-4 px-2 w-64">
+      <div class="relative bg-white rounded border">
+        <picture class="block bg-gray-200 border-b">
+          <img class="block" src="<%= artwork["imageUrl"] %>" alt="Card 2">
+        </picture>
+        <div>
+          <p class="p-4">
+            <%= artwork["displayLabel"] %>
+          </p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
