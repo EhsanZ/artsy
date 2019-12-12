@@ -16,7 +16,8 @@ defmodule ArtsyWeb.Router do
   scope "/", ArtsyWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    get "/", ArtistsController, :index
+    get "/artists/:id", ArtistsController, :show
   end
 
   # Other scopes may use custom stacks.
